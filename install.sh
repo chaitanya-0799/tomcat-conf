@@ -2,7 +2,7 @@
 
 set -e
 
-if [ $USER = "ec2-user" ]; then
+if [[ "$USER" == "ec2-user" ]]; then
     echo "Installing the packages"
     sudo yum update -y
     sudo yum install httpd -y
